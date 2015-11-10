@@ -7,9 +7,12 @@ $('#search').keyup(function(){
 		$.each(results.data, function(key, val) {
 			if(val.name.search(myExp) != -1)
 			{
-				val.name = val.name.replace(/\s+/g, '');
 				output +='<li>';
 				output +='<h2>' + val.name + '</h2>';
+				
+				//remove spaces from champion name
+				val.name = val.name.replace(/\s+/g, '');
+				
 				output +='<img src="http://ddragon.leagueoflegends.com/cdn/5.22.1/img/champion/' + val.image.full + '"></img>';
 				output +='<p>' + val.title + '</p>';
 				output +='<p>' + val.blurb + '</p>';
