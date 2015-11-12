@@ -1,6 +1,7 @@
 var showChampions = function(){
 	var searchField = $('#search').val();
 	var myExp = new RegExp(searchField, 'i');
+	
 	$.getJSON('http://ddragon.leagueoflegends.com/cdn/5.22.1/data/en_US/champion.json', function(results){
 		var output = '<ul class="searchresult">';
 		
